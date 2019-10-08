@@ -1,0 +1,9 @@
+<h1>{{ courseData[0].title }}</h1>
+<p [innerHTML]="courseData[0].body"></p>
+
+<h2>Termine</h2>
+<div *ngFor="let courseDate of courseData" style="margin-bottom: 25px;">
+  Schwierigkeitslevel: {{ courseDate.field_schwierigkeitslevel }}
+  <br>
+  Zeitraum: {{ courseDate.field_uhrzeit_beginn }} - {{ courseDate.field_uhrzeit_ende }}
+</div>
