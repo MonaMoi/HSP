@@ -9,20 +9,20 @@
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">News<span class="sr-only">(current)</span></a>
+        <a class="nav-link" routerLink="/detail-news/:id">News<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Topkurse</a>
+        <a class="nav-link" routerLink="/detail-topkurs/:id">Topkurse</a>
       </li>
       <li ngbDropdown class="nav-item dropdown">
-        <a ngbDropdownToggle class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kurskategorien</a>   
+        <a ngbDropdownToggle class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" routerLink="/overview-categories/">Kurskategorien</a>   
         <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdown01">
-          <a class="dropdown-item" href="#">Kursangebot</a>
-          <a class="dropdown-item" href="#">Kursdetails</a>
+          <a class="dropdown-item" routerLink="/overview-courses/">Kursangebot</a>
+          <a class="dropdown-item" routerLink="/detail-kurs/:id">Kursdetails</a>
         </div>
       </li>
       <li ngbDropdown class="nav-item dropdown">
-        <a ngbDropdownToggle class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Wochenuebersicht</a>   
+        <a ngbDropdownToggle class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" routerLink="/overview-week/">Wochenuebersicht</a>   
         <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdown01">
           <a ngbDropdownToggle class="dropdown-item" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kursangebot an Wochentag</a>
           <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdown01">Montag</div> 
