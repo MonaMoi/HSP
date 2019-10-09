@@ -1,3 +1,15 @@
-<p>
-  detail-news works!
-</p>
+<h2>News</h2>
+<div *ngIf="news.length == 0">
+  Keine neuen Nachrichten vorhanden.
+</div>
+<div *ngIf="news.length > 0">
+
+  <div *ngFor="let newsentry of news">
+    {{ newsentry.title }}
+  </div>
+
+  <div *ngFor="let newsentry of news">
+    {{ newsentry.field_teasertext }}
+  </div>
+
+</div>
