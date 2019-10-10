@@ -4,12 +4,15 @@
 </div>
 <div *ngIf="news.length > 0">
   <div *ngFor="let newsentry of news">
-    {{ newsentry.title }}
+    <a routerLink="/detail-news/{{ newsentry.nid }}">{{ newsentry.title }}</a>
   </div>
 </div>
 
+<h2>Topkurse</h2>
+<div *ngIf="topcourses.length == 0">
+  Keine Topkurse vorhanden.
+</div>
 <div *ngIf="topcourses.length > 0">
-  <h2>Topkurse</h2>
   <div *ngFor="let course of topcourses">
     <h3>{{ course.title }}</h3>
     ID: {{ course.nid }}

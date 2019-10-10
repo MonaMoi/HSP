@@ -16,7 +16,7 @@ const routes: Routes = [
   {path: 'detail-kurs/:id', component: DetailKursComponent},
   {path: 'detail-news/:id', component: DetailNewsComponent},
   {path: 'detail-topkurs/:id', component: DetailTopkursComponent},
-  {path: 'overview-courses', component: OverviewKurseComponent},
+  {path: 'overview-courses/:id', component: OverviewKurseComponent},
   {path: 'overview-coursesweekday', component: OverviewKurseamwochentagComponent},
   {path: 'overview-week', component: OverviewWeekComponent},
 

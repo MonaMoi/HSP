@@ -7,6 +7,7 @@ import {HttpClient} from "@angular/common/http";
   templateUrl: './detail-kurs.component.html',
   styleUrls: ['./detail-kurs.component.scss']
 })
+
 export class DetailKursComponent implements OnInit {
 
   public courseID;
