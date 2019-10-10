@@ -14,9 +14,6 @@
 </div>
 <div *ngIf="topcourses.length > 0">
   <div *ngFor="let course of topcourses">
-    <h3>{{ course.title }}</h3>
-    ID: {{ course.nid }}
-    <a routerLink="/detail-kurs/{{ course.nid }}">Link zum Topkurs</a>
-    <p [innerHTML]="course.body"></p>
+    <a routerLink="/detail-topkurs/{{ course.nid }}"><h3>{{ course.title }}</h3></a>
   </div>
 </div>

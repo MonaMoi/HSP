@@ -1,10 +1,5 @@
-<p>
-  overview-kurseamwochentag works!
-</p>
-
-<div>
-  <h1>Uebersichtsseite Kursangebot am Wochentag</h1>
-  <p>Alle Kurse an einem Wochentag <br>Durch das Anklicken eines Kurses gelangt man auf die Kursdetailseite (detail-kurs/:id)</p>
-  <a routerLink="/detail-kurs/:id">Yoga</a>
-
-</div>
+<div *ngIf="coursesData.length >= 0">
+    <div *ngFor="let course of coursesData">
+        <h3><a routerLink="/detail-kurs/{{ course.nid }}">{{ course.field_kursverknuepfung }}</a> {{ course.field_uhrzeit_beginn }} Uhr</h3>
+    </div>
+  </div>

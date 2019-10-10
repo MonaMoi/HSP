@@ -1,7 +1,3 @@
-<p>
-    overview-kurse works!
-  </p>
-  
   <div *ngIf="courseData.length > 0">
     <div *ngFor="let course of courseData">
         <h3><a routerLink="/detail-kurs/{{ course.nid }}">{{ course.title }}</a></h3>
