@@ -1,12 +1,15 @@
-<h1>{{ courseData[0].title }}</h1>
-<p [innerHTML]="courseData[0].body"></p>
+<div class="col-12 linkFont my-col shadow-lg rounded">
+    <h2>{{ courseData[0].title }}</h2>
+    <p [innerHTML]="courseData[0].body"></p>
 
 
-<h2>Termine</h2>
+
+<h4>Termine</h4>
 <div *ngFor="let courseDate of courseData" style="margin-bottom: 25px;">
   Schwierigkeitslevel: {{ courseDate.field_schwierigkeitslevel }}
   <br>
   Wochentag: {{courseDate.field_wochentag}} <br>
   Zeitraum: {{ courseDate.field_uhrzeit_beginn }} - {{ courseDate.field_uhrzeit_ende }}<br>
   Adresse: {{courseDate.field_strasse}} <br> {{courseDate.field_postleitzahl}}, {{courseDate.field_stadt}}
+</div>
 </div>

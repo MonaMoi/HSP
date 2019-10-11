@@ -1,21 +1,24 @@
-<div class="container newsbox">
-  <h2>News</h2>
-<div *ngIf="news.length == 0">
-  Keine neuen Nachrichten vorhanden.
-</div>
-<div *ngIf="news.length > 0">
-  <div *ngFor="let newsentry of news">
-    <a routerLink="/detail-news/{{ newsentry.nid }}">{{ newsentry.title }}</a>
-  </div>
-</div>
-</div>
-
-<h2>Topkurse</h2>
-<div *ngIf="topcourses.length == 0">
-  Keine Topkurse vorhanden.
-</div>
-<div *ngIf="topcourses.length > 0">
-  <div *ngFor="let course of topcourses">
-    <a routerLink="/detail-topkurs/{{ course.nid }}"><h3>{{ course.title }}</h3></a>
-  </div>
-</div>
+<div class="col-12 linkFont my-col shadow-lg rounded">
+    <h2>News</h2>
+    <div *ngIf="news.length == 0">
+      Keine neuen Nachrichten vorhanden.
+    </div>
+    <div class="box" *ngIf="news.length > 0">
+      <div *ngFor="let newsentry of news">
+          <p class="mainSize "><a class="box-link" routerLink="/detail-news/{{ newsentry.nid }}">{{ newsentry.title }}</a></p>
+      </div>
+    </div>
+    </div>
+    
+    <div class="col-12 linkFont my-col shadow-lg rounded">
+    <h2>Topkurse</h2>
+    <div *ngIf="topcourses.length == 0">
+      Keine Topkurse vorhanden.
+    </div>
+    <div *ngIf="topcourses.length > 0">
+      <div *ngFor="let course of topcourses">
+        <p class="mainSize "><a class="box-link" routerLink="/detail-topkurs/{{ course.nid }}">{{ course.title }}</a></p>
+      </div>
+    </div>
+    </div>
+    

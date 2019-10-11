@@ -1,5 +1,8 @@
-<div *ngIf="coursesData.length >= 0">
-    <div *ngFor="let course of coursesData">
-        <h3><a routerLink="/detail-kurs/{{ course.nid }}">{{ course.field_kursverknuepfung }}</a> {{ course.field_uhrzeit_beginn }} Uhr</h3>
-    </div>
-  </div>
+ <h2>Kurse</h2>
+ <div *ngIf="coursesData.length > 0">
+   <div class="row my-row">
+       <div class="col-12  linkColor2 linkFont my-col shadow-lg rounded" *ngFor="let course of coursesData">
+           <p class="mainSize "><a class="box-link" routerLink="/detail-kurs/{{ course.nid }}">{{ course.field_kursverknuepfung }}</a> <br> {{ course.field_uhrzeit_beginn }} Uhr</p>
+       </div>
+   </div>
+ </div>
