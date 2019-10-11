@@ -1,34 +1,27 @@
  <!-- Dropdown Menue  -->
 
  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-  <a class="navbar-brand" href="#">Hochschulsport</a>
+  <a class="navbar-brand" routerLink="/home/">Hochschulsport</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" routerLink="/detail-news/:id">News<span class="sr-only">(current)</span></a>
-      </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/detail-topkurs/:id">Topkurse</a>
-      </li>
-      <li ngbDropdown class="nav-item dropdown">
-        <a ngbDropdownToggle class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" routerLink="/overview-categories/">Kurskategorien</a>   
-        <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdown01">
-          <a class="dropdown-item" routerLink="/overview-courses/">Kursangebot</a>
-          <a class="dropdown-item" routerLink="/detail-kurs/:id">Kursdetails</a>
-        </div>
+        <a class="nav-link" routerLink="/overview-categories/">Kurskategorien</a>
       </li>
       <li ngbDropdown class="nav-item dropdown">
         <a ngbDropdownToggle class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" routerLink="/overview-week/">Wochenuebersicht</a>   
         <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdown01">
-          <a ngbDropdownToggle class="dropdown-item" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kursangebot an Wochentag</a>
-          <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdown01">Montag</div> 
+          <a class="dropdown-item" routerLink="/overview-coursesweekday/8">Montag</a>
+          <a class="dropdown-item" routerLink="/overview-coursesweekday/9">Dienstag</a>        
+          <a class="dropdown-item" routerLink="/overview-coursesweekday/10">Mittwoch</a>        
+          <a class="dropdown-item" routerLink="/overview-coursesweekday/11">Donnerstag</a>        
+          <a class="dropdown-item" routerLink="/overview-coursesweekday/12">Freitag</a>        
+          <a class="dropdown-item" routerLink="/overview-coursesweekday/13">Samstag</a>        
         </div>
       </li>
-      <!-- Wochentage als Kalender darstellen mit Kursverlinkung oder im Dropdown Menue die Wochentage verlinken -->
     </ul>
   </div>
 </nav>

@@ -1,4 +1,5 @@
-<h2>News</h2>
+<div class="container newsbox">
+  <h2>News</h2>
 <div *ngIf="news.length == 0">
   Keine neuen Nachrichten vorhanden.
 </div>
@@ -6,6 +7,7 @@
   <div *ngFor="let newsentry of news">
     <a routerLink="/detail-news/{{ newsentry.nid }}">{{ newsentry.title }}</a>
   </div>
+</div>
 </div>
 
 <h2>Topkurse</h2>
