@@ -35,7 +35,7 @@ export class DetailKursComponent implements OnInit {
   public enroll() {
     this.isCollapsed = !this.isCollapsed;
     for(const course of this.courseData){
-      this.myCourse = [{"title":""+course.title+"","id":"" +course.nid+""}];
+      this.myCourse = [{"title":""+course.title+"","id":"" +course.nid+"","uhrzeit":"" +course.field_uhrzeit_beginn+""}];
     }
 
     this.getObject1 = JSON.parse(localStorage.getItem('storeObj'));
