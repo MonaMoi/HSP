@@ -1,4 +1,17 @@
 <div class="col-12 linkFont my-col shadow-lg rounded">
+<h2>Angemeldete Kurse</h2>
+<div *ngIf="getEnrolled == null">
+    Keine
+</div>
+<div class="box" *ngIf="getEnrolled != null">
+  <div *ngFor="let courses of getEnrolled">
+    <p class="mainSize "><a class="box-link" routerLink="/detail-kurs/{{ courses.id }}">{{ courses.title }} </a></p>
+  </div>
+</div>
+</div>
+
+
+<div class="col-12 linkFont my-col shadow-lg rounded">
     <h2>News</h2>
     <div *ngIf="news.length == 0">
       Keine neuen Nachrichten vorhanden.

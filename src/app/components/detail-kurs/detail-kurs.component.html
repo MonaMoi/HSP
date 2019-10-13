@@ -9,7 +9,8 @@
   Schwierigkeitslevel: {{ courseDate.field_schwierigkeitslevel }}
   <br>
   Wochentag: {{courseDate.field_wochentag}} <br>
-  Zeitraum: {{ courseDate.field_uhrzeit_beginn }} - {{ courseDate.field_uhrzeit_ende }}<br>
+  Zeitraum: {{ courseDate.field_uhrzeit_beginn }} - {{ courseDate.field_uhrzeit_ende }}
+  <button *ngIf="!isCollapsed" (click)="enroll()" [id]='termin + i'>Anmelden</button><br>
   Adresse: {{courseDate.field_strasse}} <br> {{courseDate.field_postleitzahl}}, {{courseDate.field_stadt}}
 </div>
 </div>
